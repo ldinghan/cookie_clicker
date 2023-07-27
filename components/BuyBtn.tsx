@@ -28,7 +28,7 @@ const BuyBtn = ({ btnName, btnCost, btnMultiplier }: BuyBtn ) => {
         }
     }
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-1/4 h-fit'>
             Level {currentLevel} ({(currentLevel-1) * btnMultiplier})
             <button onClick={handlePurchase} className="bg-green-300 w-fit h-fit px-8">Buy {btnName} for {btnCost} points</button>
             {showError && <div className='text-red-500'>Not enough points!</div>}

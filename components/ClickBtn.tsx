@@ -7,7 +7,7 @@ const ClickBtn = () => {
     const dispatch = useDispatch()
 
     return (
-        <button className="bg-blue-300 w-36 h-36 my-5" onClick={() => dispatch(incrementByAmount(multiplier))}>click me ({multiplier?.toFixed(2)})</button>
+        <button className="select-none bg-blue-300 w-36 h-36 my-5" onClick={() => dispatch(incrementByAmount(multiplier))}>click me ({multiplier?.toFixed(2)})</button>
     )
 }
 

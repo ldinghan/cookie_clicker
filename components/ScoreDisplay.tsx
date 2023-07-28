@@ -8,7 +8,7 @@ const ScoreDisplay = () => {
 
     return (
         <>
-            <div className="text-5xl">{count.toFixed(2)}</div>
+            <div className="text-5xl">{count?.toFixed(2)}</div>
         </>
     )
 }

@@ -11,12 +11,13 @@ const multiplierSlice = createSlice({
     incrementByAmount: (state, action:PayloadAction<number>) => {
       state.value += action.payload
     },
-    decrementByAmount: (state, action:PayloadAction<number>) => {
-        state.value -= action.payload
-    },
+    setMultiplier: (state, action:PayloadAction<number>) => {
+      state.value = action.payload
+    }
+
   },
 })
 
-export const { incrementByAmount, decrementByAmount } = multiplierSlice.actions
+export const { incrementByAmount, setMultiplier } = multiplierSlice.actions
 
 export default multiplierSlice.reducer

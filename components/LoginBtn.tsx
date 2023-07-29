@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { signInAnonymously } from "firebase/auth";
+import { signInAnonymously, signOut } from "firebase/auth";
 import { ref, get } from "firebase/database";
 import { auth, database } from "../firebase";
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,7 +26,7 @@ const LoginBtn = () => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ...
+            console.error(errorMessage, errorCode);
         });
     }
 
@@ -56,7 +56,9 @@ const LoginBtn = () => {
     
 
     return (
-        <button onClick={handleLogin}>Login</button>
+        <>
+            {!loggedIn && <button onClick={handleLogin}>Login</button>}
+        </>
     )
 
 }

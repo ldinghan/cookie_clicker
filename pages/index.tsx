@@ -2,7 +2,7 @@
 import ClickBtn from '../components/ClickBtn'
 import BuyBtn from '../components/BuyBtn'
 import ScoreDisplay from '../components/ScoreDisplay';
-import LoginBtn from '../components/LoginBtn';
+import Navbar from '../components/Navbar';
 import { useSelector } from 'react-redux'
 import { database } from '../firebase';
 import { useEffect } from 'react';
@@ -37,9 +37,9 @@ export default function Home() {
 
   return (
     <>
-    <LoginBtn/>
+    
     <div className='flex justify-center items-center flex-col'>
-      <div className='text-3xl text-center bg-emerald-300 w-full mb-10'>HI THERE {uid}</div>
+      <Navbar uid={uid} />
       <ScoreDisplay />
       <ClickBtn />
       <div className='flex justify-center items-center w-full max-w-xl'>
